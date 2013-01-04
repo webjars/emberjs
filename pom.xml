@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>emberjs</artifactId>
-    <version>1.0.0-pre.2</version>
+    <version>1.0.1-pre.2-SNAPSHOT</version>
     <name>Ember.js</name>
     <description>WebJar for Ember.js</description>
     <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
         <url>http://github.com/webjars/emberjs</url>
         <connection>scm:git:https://github.com/webjars/emberjs.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/emberjs.git</developerConnection>
-        <tag>emberjs-1.0.0-pre.2</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
