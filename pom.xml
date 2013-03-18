@@ -42,7 +42,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <upstreamVersion>1.0.0-pre.2</upstreamVersion>
-        <upstreamSourceUrl>https://github.com/downloads/emberjs/ember.js</upstreamSourceUrl>
+        <upstreamSourceUrl>http://cloud.github.com/downloads/emberjs/ember.js</upstreamSourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
 
