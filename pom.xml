@@ -41,8 +41,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>1.0.0-pre.2</upstreamVersion>
-        <upstreamSourceUrl>http://cloud.github.com/downloads/emberjs/ember.js</upstreamSourceUrl>
+        <upstreamVersion>1.0.0-rc.2</upstreamVersion>
+        <upstreamSourceUrl>http://cdnjs.cloudflare.com/ajax/libs/ember.js</upstreamSourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
 
@@ -58,8 +58,8 @@
                         <phase>process-resources</phase>
                         <goals><goal>download-single</goal></goals>
                         <configuration>
-                            <url>${upstreamSourceUrl}</url>
-                            <fromFile>ember-${upstreamVersion}.js</fromFile>
+                            <url>${upstreamSourceUrl}/${upstreamVersion}</url>
+                            <fromFile>ember.js</fromFile>
                             <toFile>${destDir}/ember.js</toFile>
                         </configuration>
                     </execution>
@@ -68,8 +68,8 @@
                         <phase>process-resources</phase>
                         <goals><goal>download-single</goal></goals>
                         <configuration>
-                            <url>${upstreamSourceUrl}</url>
-                            <fromFile>ember-${upstreamVersion}.min.js</fromFile>
+                            <url>${upstreamSourceUrl}/${upstreamVersion}</url>
+                            <fromFile>ember.min.js</fromFile>
                             <toFile>${destDir}/ember.min.js</toFile>
                         </configuration>
                     </execution>
