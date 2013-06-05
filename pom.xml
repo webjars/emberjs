@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>emberjs</artifactId>
-    <version>1.0.1-rc.3-SNAPSHOT</version>
+    <version>1.0.1-rc.4-SNAPSHOT</version>
     <name>Ember.js</name>
     <description>WebJar for Ember.js</description>
     <url>http://webjars.org</url>
@@ -43,13 +43,18 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
-            <version>1.8.3</version>
+            <version>2.0.0</version>
+        </dependency>
+	<dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>handlebars</artifactId>
+            <version>1.0.0-rc.4</version>
         </dependency>
     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>1.0.0-rc.3</upstreamVersion>
+        <upstreamVersion>1.0.0-rc.4</upstreamVersion>
         <upstreamSourceUrl>http://cdnjs.cloudflare.com/ajax/libs/ember.js</upstreamSourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
