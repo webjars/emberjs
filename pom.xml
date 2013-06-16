@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>emberjs</artifactId>
-    <version>1.0.1-rc.3-SNAPSHOT</version>
+    <version>1.0.0-rc.5-SNAPSHOT</version>
     <name>Ember.js</name>
     <description>WebJar for Ember.js</description>
     <url>http://webjars.org</url>
@@ -37,20 +37,25 @@
             <name>James Ward</name>
             <email>james@jamesward.org</email>
         </developer>
+        <developer>
+            <id>rafelbev</id>
+            <name>Raphael Borg Ellul Vincenti</name>
+            <email>raphael@linux.org.mt</email>
+        </developer>
     </developers>
 
     <dependencies>
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
-            <version>1.8.3</version>
+            <version>1.9.1</version>
         </dependency>
     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>1.0.0-rc.3</upstreamVersion>
-        <upstreamSourceUrl>http://cdnjs.cloudflare.com/ajax/libs/ember.js</upstreamSourceUrl>
+        <upstreamVersion>1.0.0-rc.5</upstreamVersion>
+        <upstreamSourceUrl>http://builds.emberjs.com.s3.amazonaws.com</upstreamSourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
 
@@ -66,8 +71,8 @@
                         <phase>process-resources</phase>
                         <goals><goal>download-single</goal></goals>
                         <configuration>
-                            <url>${upstreamSourceUrl}/${upstreamVersion}</url>
-                            <fromFile>ember.js</fromFile>
+                            <url>${upstreamSourceUrl}</url>
+                            <fromFile>ember-${upstreamVersion}.js</fromFile>
                             <toFile>${destDir}/ember.js</toFile>
                         </configuration>
                     </execution>
@@ -76,8 +81,8 @@
                         <phase>process-resources</phase>
                         <goals><goal>download-single</goal></goals>
                         <configuration>
-                            <url>${upstreamSourceUrl}/${upstreamVersion}</url>
-                            <fromFile>ember.min.js</fromFile>
+                            <url>${upstreamSourceUrl}</url>
+                            <fromFile>ember-${upstreamVersion}.min.js</fromFile>
                             <toFile>${destDir}/ember.min.js</toFile>
                         </configuration>
                     </execution>
