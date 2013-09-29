@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>emberjs</artifactId>
-    <version>1.0.1-rc.6-SNAPSHOT</version>
+    <version>1.0.0-rc.8-SNAPSHOT</version>
     <name>Ember.js</name>
     <description>WebJar for Ember.js</description>
     <url>http://webjars.org</url>
@@ -53,14 +53,14 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>handlebars</artifactId>
-            <version>1.0.0-rc.4</version>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>1.0.0-rc.6</upstreamVersion>
-        <upstreamSourceUrl>http://builds.emberjs.com.s3.amazonaws.com</upstreamSourceUrl>
+        <upstreamVersion>1.0.0-rc.8</upstreamVersion>
+        <upstreamSourceUrl>http://builds.emberjs.com/tags/v${upstreamVersion}</upstreamSourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
 
@@ -77,7 +77,7 @@
                         <goals><goal>download-single</goal></goals>
                         <configuration>
                             <url>${upstreamSourceUrl}</url>
-                            <fromFile>ember-${upstreamVersion}.js</fromFile>
+                            <fromFile>ember.js</fromFile>
                             <toFile>${destDir}/ember.js</toFile>
                         </configuration>
                     </execution>
@@ -87,8 +87,18 @@
                         <goals><goal>download-single</goal></goals>
                         <configuration>
                             <url>${upstreamSourceUrl}</url>
-                            <fromFile>ember-${upstreamVersion}.min.js</fromFile>
+                            <fromFile>ember.min.js</fromFile>
                             <toFile>${destDir}/ember.min.js</toFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>download-prod-js</id>
+                        <phase>process-resources</phase>
+                        <goals><goal>download-single</goal></goals>
+                        <configuration>
+                            <url>${upstreamSourceUrl}</url>
+                            <fromFile>ember.prod.js</fromFile>
+                            <toFile>${destDir}/ember.prod.js</toFile>
                         </configuration>
                     </execution>
                 </executions>
