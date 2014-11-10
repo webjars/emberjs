@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>emberjs</artifactId>
-    <version>1.7.1-SNAPSHOT</version>
+    <version>1.8.1-SNAPSHOT</version>
     <name>Ember.js</name>
     <description>WebJar for Ember.js</description>
     <url>http://webjars.org</url>
@@ -59,7 +59,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>1.7.0</upstreamVersion>
+        <upstreamVersion>1.8.1</upstreamVersion>
         <upstreamSourceUrl>http://builds.emberjs.com/tags/v${upstreamVersion}</upstreamSourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
